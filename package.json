@@ -1,6 +1,6 @@
 {
   "name": "@multisolution/multipart-parser",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Returning Values from Strings: multipart/form-data",
   "main": "index.js",
   "repository": "git@github.com:multisolution/multipart-parser.git",
