@@ -1,6 +1,6 @@
 {
   "name": "@multisolution/multipart-parser",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "Returning Values from Strings: multipart/form-data",
   "keywords": [
     "multipart/form-data",
