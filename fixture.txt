@@ -9,4 +9,5 @@ X-Bar: bar
 
 Bar Body
 
------boundary--
+-----boundary
+Content-Disposition: form-data; name="baz"

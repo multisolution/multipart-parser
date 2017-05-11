@@ -31,7 +31,7 @@ function toData(data, part) {
 
   data[key] = {
     headers,
-    value: body.trim()
+    value: typeof body === 'undefined' ? '' : body.trim()
   }
 
   return data
@@ -39,7 +39,7 @@ function toData(data, part) {
 
 function part(rawPart) {
   const [rawHeaders, rawBody] = rawPart.split(T_HEADERS_BODY)
-  const headers = rawHeaders.split(T_EOL).map(header)
+  const headers = rawHeaders.split(T_EOL).filter(empty).map(header)
   const body = rawBody
 
   return { headers, body }
@@ -48,7 +48,7 @@ function part(rawPart) {
 function header(rawHeader) {
   const [rawName, rawValue] = rawHeader.split(T_HEADER_KEYVAL)
   const name = rawName.trim()
-  const value = rawValue.trim()
+  const value = typeof rawValue === 'undefined' ? '' : rawValue.trim()
 
   return { name, value }
 }
