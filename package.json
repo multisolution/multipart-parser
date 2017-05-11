@@ -1,5 +1,5 @@
 {
-  "name": "multipart-parser",
+  "name": "@multisolution/multipart-parser",
   "version": "1.0.0",
   "description": "Returning Values from Strings: multipart/form-data",
   "main": "index.js",
