@@ -1,10 +1,16 @@
+const T_EMPTY_STR = ''
+const T_EOL = '\n'
+const T_HEADER_KEYVAL = ':'
+const T_HEADER_META = ';'
+const T_HEADERS_BODY = '\n\n'
+
 exports.parse = function parse(raw, boundary = null) {
   if (null === boundary) {
-    boundary = raw.split('\n')[0].trim()
+    boundary = raw.split(T_EOL)[0].trim()
   }
 
   return raw
-    .split(boundary + '\n')
+    .split(boundary + T_EOL)
     .filter(empty)
     .map(part)
     .reduce(toData, {})
@@ -18,10 +24,10 @@ function toData(data, part) {
     .reduce((key, header) => {
       return header
         .value
-        .split(';')[1]
+        .split(T_HEADER_META)[1]
         .trim()
         .match(/name="(.+)"/)[1]
-    }, '')
+    }, T_EMPTY_STR)
 
   data[key] = {
     headers,
@@ -32,15 +38,15 @@ function toData(data, part) {
 }
 
 function part(rawPart) {
-  const [rawHeaders, rawBody] = rawPart.split('\n\n')
-  const headers = rawHeaders.split('\n').map(header)
+  const [rawHeaders, rawBody] = rawPart.split(T_HEADERS_BODY)
+  const headers = rawHeaders.split(T_EOL).map(header)
   const body = rawBody
 
   return { headers, body }
 }
 
 function header(rawHeader) {
-  const [rawName, rawValue] = rawHeader.split(':')
+  const [rawName, rawValue] = rawHeader.split(T_HEADER_KEYVAL)
   const name = rawName.trim()
   const value = rawValue.trim()
 
@@ -48,7 +54,7 @@ function header(rawHeader) {
 }
 
 function empty(rawPart) {
-  if (rawPart.trim() === '') {
+  if (rawPart.trim() === T_EMPTY_STR) {
     return false
   }
 
