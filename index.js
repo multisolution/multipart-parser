@@ -1,8 +1,8 @@
 const T_EMPTY_STR = ''
-const T_EOL = '\n'
+const T_EOL = '\r\n'
 const T_HEADER_KEYVAL = ':'
 const T_HEADER_META = ';'
-const T_HEADERS_BODY = '\n\n'
+const T_HEADERS_BODY = '\r\n\r\n'
 
 exports.parse = function parse(raw, boundary = null) {
   if (null === boundary) {
