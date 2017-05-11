@@ -25,7 +25,7 @@ function toData(data, part) {
 
   data[key] = {
     headers,
-    value: body
+    value: body.trim()
   }
 
   return data
