@@ -1,0 +1,12 @@
+-----boundary
+Content-Disposition: form-data; name="foo"
+X-Foo: foo
+
+Foo Body
+-----boundary
+Content-Disposition: form-data; name="bar"
+X-Bar: bar
+
+Bar Body
+
+-----boundary--
