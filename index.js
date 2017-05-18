@@ -1,8 +1,8 @@
 const T_EMPTY_STR = ''
-const T_EOL = '\r\n'
+const T_EOL = /\r?\n/g
 const T_HEADER_KEYVAL = ':'
 const T_HEADER_META = ';'
-const T_HEADERS_BODY = '\r\n\r\n'
+const T_HEADERS_BODY = /\r?\n\r?\n/g
 
 exports.parse = function parse(raw, boundary = null) {
   if (null === boundary) {
@@ -10,7 +10,7 @@ exports.parse = function parse(raw, boundary = null) {
   }
 
   return raw
-    .split(boundary + T_EOL)
+    .split(boundary)
     .filter(empty)
     .map(part)
     .reduce(toData, {})

@@ -1,0 +1,40 @@
+------WebKitFormBoundaryK9hKM2QQ9cjnK8rH
+Content-Disposition: form-data; name="name"
+
+attachment.txt
+------WebKitFormBoundaryK9hKM2QQ9cjnK8rH
+Content-Disposition: form-data; name="key"
+
+data/3830719/attachment.txt
+------WebKitFormBoundaryK9hKM2QQ9cjnK8rH
+Content-Disposition: form-data; name="acl"
+
+private
+------WebKitFormBoundaryK9hKM2QQ9cjnK8rH
+Content-Disposition: form-data; name="policy"
+
+eyJleHBpcmF0aW9uIjoiMjAxNy0wNS0xMVQxODoyNzoxM1oiLCJjb25kaXRpb25zIjpbWyJzdGFydHMtd2l0aCIsIiRrZXkiLCIiXSxbInN0YXJ0cy13aXRoIiwiJEZpbGVuYW1lIiwiIl0sWyJzdGFydHMtd2l0aCIsIiRuYW1lIiwiIl0seyJzdWNjZXNzX2FjdGlvbl9zdGF0dXMiOiIyMDEifSxbImNvbnRlbnQtbGVuZ3RoLXJhbmdlIiwwLDEwNDg1OTJdLHsiYnVja2V0IjoicnVucnVuaXQifSx7ImFjbCI6InByaXZhdGUifSx7ImtleSI6ImRhdGEvMzgzMDcxOS9hdHRhY2htZW50LnR4dCJ9LHsiY29udGVudF90eXBlIjoidGV4dC9wbGFpbiJ9XX0=
+------WebKitFormBoundaryK9hKM2QQ9cjnK8rH
+Content-Disposition: form-data; name="signature"
+
+ieB4XqmYaWlht5E0jHHN5Wbg1Ko=
+------WebKitFormBoundaryK9hKM2QQ9cjnK8rH
+Content-Disposition: form-data; name="AWSAccessKeyId"
+
+AKIAJMTGAIIZEXSVTORA
+------WebKitFormBoundaryK9hKM2QQ9cjnK8rH
+Content-Disposition: form-data; name="content_type"
+
+text/plain
+------WebKitFormBoundaryK9hKM2QQ9cjnK8rH
+Content-Disposition: form-data; name="filename"
+
+attachment.txt
+------WebKitFormBoundaryK9hKM2QQ9cjnK8rH
+Content-Disposition: form-data; name="success_action_status"
+
+201
+------WebKitFormBoundaryK9hKM2QQ9cjnK8rH
+Content-Disposition: form-data; name="file"; filename="attachment.txt"
+Content-Type: text/plain
+
